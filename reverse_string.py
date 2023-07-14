@@ -5,13 +5,13 @@ class Solution(object):
         :type s: List[str]
         :rtype: None
         """
-        left = 0
-        right = len(s) - 1
+        left = 0  # represents left of list
+        right = len(s) - 1 # represents right of list
 
         while left < right:
-            s[left], s[right] = s[right], s[left]
-            left += 1
-            right -= 1
+            s[left], s[right] = s[right], s[left] # swaps left and right
+            left += 1 # left element goes to next
+            right -= 1 # decrements backwords
 
 solution = Solution()
 s = ["h", "e", "l", "l", "o"]
