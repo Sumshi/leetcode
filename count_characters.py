@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 # count the number of times characters appear in a string
 def count_characters(s):
-    char_count = {} # empty dictionary store the character counts.
-
-    for char in s:
-        # increment the count for each character
-        char_count[char] = char_count.get(char, 0) + 1
-
-    return char_count
+    l = list(s)
+    frequency = [l.count(element) for element in l]
+    return dict(zip(l, frequency))
 
 # Example usage
 input_str = "hello"
